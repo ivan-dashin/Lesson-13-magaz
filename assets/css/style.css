@@ -24,63 +24,320 @@ input[type=text], input[type=password] {
   background-color: transparent;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+header .logo {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: baseline;
+}
+header .logo:hover {
+  cursor: pointer;
+}
+header .logo .ellipse {
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  background-color: #fd5a3d;
+}
+header .navigate {
+  width: 40%;
+}
+header .navigate .nav-links {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  border-right: 1px solid #808080;
+  padding-right: 7%;
+}
+header .navigate .nav-links a {
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+header .navigate .nav-links a:hover {
+  color: #fd5a3d;
+}
+
+svg, .burger-menu {
+  background-color: transparent;
+  transition: 0.4s;
+  padding: 8px;
+  border-radius: 8px;
+}
+svg:hover, svg .active, .burger-menu:hover, .burger-menu .active {
+  background-color: rgba(232, 131, 8, 0.4);
+}
+
 h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
+  font-size: 20px;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 14px;
 }
 
 h4 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  font-size: 12px;
 }
 
 p {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
+  font-size: 14px;
+}
+
+a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
 }
 
 .btn.main {
-  width: 100%;
-  border: 1px solid #FF3D00;
-  color: #FF3D00;
+  width: 33%;
+  border: 1px solid #fd5a3d;
+  color: #fd5a3d;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   padding: 10px 0;
   transition: 0.4s;
+  border-radius: 8px;
 }
 .btn.main:hover {
-  width: 100%;
-  border: 1px solid #FF3D00;
-  color: #FF3D00;
+  width: 33%;
+  border: 1px solid #fd5a3d;
+  color: #fd5a3d;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   padding: 10px 0;
   transition: 0.4s;
-  background-color: #FF3D00;
+  border-radius: 8px;
+  background-color: #fd5a3d;
   color: white;
   cursor: pointer;
 }
 
 .btn.second {
-  width: 100%;
+  width: 33%;
   border: 1px solid #0085FF;
   color: #0085FF;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   padding: 10px 0;
   transition: 0.4s;
+  border-radius: 8px;
 }
 .btn.second:hover {
-  width: 100%;
+  width: 33%;
   border: 1px solid #0085FF;
   color: #0085FF;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   padding: 10px 0;
   transition: 0.4s;
+  border-radius: 8px;
   background-color: #0085FF;
   color: white;
   cursor: pointer;
+}
+
+.btn.reverse {
+  width: 33%;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  padding: 10px 0;
+  transition: 0.4s;
+  border-radius: 8px;
+}
+.btn.reverse:hover {
+  width: 33%;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  padding: 10px 0;
+  transition: 0.4s;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: white;
+  cursor: pointer;
+  color: #fd5a3d;
+}
+
+.wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.cards .wrapper .container .product .back, .cards .wrapper .container .product, .category .cards, .main .wrapper .row, .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+.main {
+  background-color: #fd5a3d;
+}
+.main .wrapper .row .content {
+  width: 45%;
+}
+.main .wrapper .row .content h1 {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-size: 80px;
+  color: #ffffff;
+}
+.main .wrapper .cover {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+.main .wrapper .cover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category .cards .card {
+  width: 31%;
+  cursor: pointer;
+}
+.category .cards .card .cover {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+.category .cards .card .cover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.category .cards .card .cover img {
+  transition: 0.5s;
+}
+.category .cards .card .cover img:hover {
+  filter: grayscale(1);
+  cursor: pointer;
+}
+.category .cards .card .cover h2 {
+  position: absolute;
+  z-index: 1;
+  bottom: 50%;
+  text-align: center;
+  width: 100%;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.category .cards:first-child {
+  margin-bottom: 3.5%;
+}
+.category .cards:first-child .card:first-child {
+  width: 65.5%;
+}
+.category .cards:first-child .card:first-child .cover {
+  position: relative;
+  width: 100%;
+  padding-top: 47%;
+}
+.category .cards:first-child .card:first-child .cover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cards .wrapper .container .product {
+  width: 31%;
+  flex-direction: column;
+  transition: 0.4s;
+  border: 1px solid transparent;
+}
+.cards .wrapper .container .product:hover {
+  cursor: pointer;
+  border: 1px solid rgba(32, 32, 32, 0.3019607843);
+}
+.cards .wrapper .container .product p {
+  text-align: center;
+}
+.cards .wrapper .container .product .back {
+  background-color: #fdf2f2;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+.cards .wrapper .container .product .back .cover {
+  position: relative;
+  width: 100%;
+  padding-top: 120%;
+}
+.cards .wrapper .container .product .back .cover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cards .wrapper .container .product .back .cover .circle {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  z-index: 0;
+  width: 60%;
+  padding-top: 60%;
+  background-color: #ffffff;
+  border-radius: 100%;
+}
+.cards .wrapper .container .product .back .cover img {
+  scale: 0.85;
+  z-index: 1;
+}
+.cards .wrapper .container .product .content {
+  padding-bottom: 10%;
+}
+.cards .wrapper .container .product .content .title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 23px;
+  margin-top: 20px;
+}
+.cards .wrapper .container .product .content .price {
+  font-size: 18px;
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

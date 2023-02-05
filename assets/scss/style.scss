@@ -1,15 +1,43 @@
 @import 'default';
 @import 'colors';
 @import 'mixin';
+@import 'main/header';
+@import 'main/footer';
 
+svg,.burger-menu{
+    background-color: transparent;
+    transition: 0.4s;
+    padding: 8px;
+    border-radius: 8px;
+
+    &:hover, .active{
+        background-color: rgba(232, 131, 8, 0.4);
+    }
+}
 h1{
     @include font(900);
+    font-size: 20px;
+}
+h2{
+    @include font(900);
+    font-size: 16px;
+}
+h3{
+    @include font(900);
+    font-size: 14px;
 }
 h4{
     @include font(700);
+    font-size: 12px;
 }
 p{
     @include font(400);
+    font-size: 14px;
+}
+a{
+    @include font(400);
+    font-size: 14px;
+    color: $black;
 }
 .btn.main{
     @include btn($main);
@@ -23,5 +51,138 @@ p{
     
     &:hover{
         @include activeBtn($second);
+    }
+}
+.btn.reverse{
+    @include btn($white);
+    &:hover{
+        @include activeBtn($white);
+        color: $main;
+    }
+}
+.wrapper{
+    width: 70%;
+    margin: 0 auto;
+}
+%container, .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section{
+    margin-bottom: 80px;
+}
+.main{
+    background-color: $main;
+    .wrapper{
+        .row{
+            @extend %container;
+            .content{
+                width: 45%;
+                h1{
+                    @include marker(80px);
+                    color: $white;
+                }
+            }
+        }
+        .cover{
+            @include cover(100%);
+           
+        }
+    }
+}
+.category{
+    .cards{
+        @extend %container;
+        .card{
+            width: 31%;
+            cursor: pointer;
+            .cover{
+                @include cover(100%);
+                img{
+                    transition: 0.5s;
+               &:hover{
+                   filter: grayscale(1);
+                   cursor: pointer;
+               }
+            }
+                h2{
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 50%;
+                    text-align: center;
+                    width: 100%;
+                    font-size: 32px;
+                    text-transform: uppercase;
+                    color: $white;
+                }
+            }
+        }
+        &:first-child{
+            margin-bottom: 3.5%;
+            .card:first-child{
+                width: 65.5%;
+                .cover{
+                    @include cover(47%);
+                }
+            }
+        }
+    }
+}
+.cards{
+    .wrapper{
+        .container{
+            .product{
+                width: 31%;
+                @extend %container;
+                flex-direction:column ;
+                transition: 0.4s;
+                border:1px solid transparent;
+                
+                &:hover{
+                    cursor: pointer;
+                    border:1px solid #2020204d;
+                }
+                p{
+                    text-align: center;
+                }
+                .back{
+                    background-color: $card;
+                    width: 100%;
+                    @extend %container;
+                    flex-direction: column;
+                    justify-content: center;
+                    .cover{
+                        @include cover(120%);
+                        .circle{
+                            position: absolute;
+                            top: 20%;
+                            left: 20%;
+                            z-index: 0;
+                            width: 60%;
+                            padding-top: 60%;
+                            background-color: $white;
+                            border-radius: 100%;
+                        }
+                       img{
+                           scale: 0.85;
+                           z-index: 1;
+                       }
+                    }
+                }
+                .content{
+                    padding-bottom: 10%;
+                    .title{
+                        @include font(400);
+                        font-size: 23px;
+                        margin-top: 20px;
+                    }
+                    .price{
+                        font-size: 18px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
     }
 }
